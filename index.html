@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+  <!-- NAVBAR-->  
+  <nav>
+    <div class="left">
+        <a href="/">Michael Lagary</a>
+    </div>
+        
+    <div class="right">
+        <a href="https://open.spotify.com/artist/6thJZaEtD7MqMPvN1CZqB7" target="_blank" rel="noopener 
+        noreferrer">
+        <i class="fa-brands fa-spotify"></i>
+        <span>Spotify</span>
+       </a>
+
+
+       <a href="https://www.linkedin.com/in/michael-lagary-640001261/" target="_blank" rel="noopener 
+        noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+       </a>
+       
+       <a href="mailto:lagarym1@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+       </a>
+       <button onclick="toggleTheme()" class="theme-toggle">
+        <i id="theme-icon" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </nav> 
+
+
+  <main>
+   <!-- SECTION 1: Hero -->
+   <section class="hero-section">
+    <div class="text">
+      <h2>Hi, I'm Michael👋</h2>
+      <p>I'm a skilled audio engineer with a solid foundation in recording, mixing, mastering, and sound design for music, film, TV, and video games. I work with industry standard tools and gear, and I bring deep knowledge of acoustics, signal flow, and post production workflows. I lead projects from concept to final mix, aligning creative vision with technical precision. I collaborate closely with artists, producers, and directors to craft immersive soundscapes, while also keeping studio systems running smoothly. I'm detail oriented, creative, and driven by a passion for storytelling through sound.</p>
+
+      <div class="links">
+        <a href="#skills">
+            <i class="fa-solid fa-user-gear"></i>
+            <span>Skills</span>
+        </a>
+
+        <a href="#albums">
+          <i class="fa-solid fa-music"></i>
+            <span>Albums</span>
+        </a>
+
+        <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="headshot">
+      <img src="images\PlayerHeadshot.png" alt="michael lagary headshot">
+    </div>
+   </section> 
+
+   <!-- SECTION 2: Skills -->
+   <section id = "skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class = "text">
+      Proficient in a range of industry standard software used for audio production, composition, and workflow management.
+    </div>
+
+    <div class="cells">
+      <div class="cell">
+        <img src="images/FL-Studio-Logo-Icon.png" alt="fl-studio logo">
+        <span>FL Studio</span>
+      </div>
+      
+      <div class="cell">
+        <img src="images/Finale_Logo.svg.png" alt="finale logo">
+        <span>Finale</span>
+      </div>
+
+      <div class="cell">
+        <img src="images/Logic_Pro_icon.png" alt="logic-pro logo">
+        <span>Logic Pro</span>
+      </div>
+
+      <div class="cell">
+        <img src="images/PT2019.svg.png" alt="pro-tools logo">
+        <span>Pro Tools</span>
+      </div>
+
+      <div class="cell">
+        <img src="images/Microsoft_Office_logo_(2013–2019).svg.png" alt="MS365 logo">
+        <span>Microsoft Office 365</span>
+      </div>
+    </div>
+   </section>
+
+    <!-- SECTION 3: Albums -->
+<section id="albums" class="albums-section">
+  <h2>Albums</h2>
+  <div class="albums-grid">
+    <div class="album">
+      <img src="images/My Wolrd.jpg" alt="my world logo">
+      <span>My World</span>
+    </div>
+    <div class="album">
+      <img src="images/Second Coming.jpg" alt="second coming logo">
+      <span>Second Coming</span>
+    </div>
+    <div class="album">
+      <img src="images/Stages.jpg" alt="stages logo">
+      <span>Stages</span>
+    </div>
+  </div>
+</section>
+   </section>
+
+   <!-- SECTION 4: Contact -->
+   <section id="contact" class="contact-section">
+     <h2>Contact</h2>
+
+     <div class="group">
+      <div class="text">
+        Interested in working together or have a question?
+Please use the form to get in touch regarding project inquiries, collaborations, or other professional matters. I aim to respond promptly and look forward to hearing from you.
+      </div>
+
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" cols="30" rows="10"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+     </div>
+   </section>
+  </main>
+  <script>
+    const themeIcon = document.getElementById("theme-icon");
+  
+    const toggleTheme = () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+  
+      updateThemeIcon(newTheme);
+    };
+  
+    const updateThemeIcon = (theme) => {
+      if (theme === "dark") {
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
+      } else {
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+      }
+    };
+  
+    // On load, apply saved theme and icon
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+      updateThemeIcon(savedTheme);
+    });
+  </script>  
+</body>
+</html>
